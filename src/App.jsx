@@ -38,13 +38,10 @@ function App() {
 
   {product && (
     <List sx={{ bgcolor: "background.paper", borderRadius: 3, boxShadow: 4, p: 2 }}>
-      <ListItem sx={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+      <ListItem sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyItems: "center", textAlign: "center" }}>
         <ListItemAvatar>
           <Avatar sx={{ width: 80, height: 80, mb: 1 }} src={product.images?.[0]?.url} alt={product.titles.en} />
         </ListItemAvatar>
-        <Typography variant="h6" fontWeight="bold">
-          {product.titles.en}
-        </Typography>
       </ListItem>
       <ListItem divider>
         <ListItemText primary="Title" secondary={product.titles?.en} />
